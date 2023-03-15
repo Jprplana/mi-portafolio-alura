@@ -27,23 +27,23 @@ document.querySelector("form").addEventListener("submit", validarDatos);
 
 ///////////////////////////////////////////////////////////////////////
 
-// let menuVisible = false;
-// //Función que oculta o muestra el menu
-// function mostrarOcultarMenu(){
-//     if(menuVisible){
-//         document.getElementById("dropdown").classList ="";
-//         menuVisible = false;
-//     }else{
-//         document.getElementById("dropdown").classList ="responsive";
-//         menuVisible = true;
-//     }
-// }
+let menuVisible = false;
+//Función que oculta o muestra el menu
+function mostrarOcultarMenu(){
+    if(menuVisible){
+        document.getElementById("dropdown").classList ="";
+        menuVisible = false;
+    }else{
+        document.getElementById("dropdown").classList ="responsive";
+        menuVisible = true;
+    }
+}
 
-// function seleccionar(){
-//     //oculto el menu una vez que selecciono una opcion
-//     document.getElementById("dropdown").classList = "";
-//     menuVisible = false;
-// }
+function seleccionar(){
+    //oculto el menu una vez que selecciono una opcion
+    document.getElementById("dropdown").classList = "";
+    menuVisible = false;
+}
 
 
 
@@ -90,52 +90,56 @@ document.querySelector("form").addEventListener("submit", validarDatos);
 // };
 
 
-const navbar = document.querySelector(".navbar");
-const menu = document.querySelector(".navbar__menu");
-const links = document.querySelector(".navbar__links");
-const sections = document.querySelectorAll("section");
-const config = {
-    rootMargin: "0px",
-    threshold: [0.6, 0.9],
-};
 
-function handleLlinks() {
-    if (window.innerWidth <= 678) {
-        links.classList.toggle("visible");
-    }
-}
+////////////////////////////////////////////////////////////////////////////////////////
 
-menu.addEventListener("click", handleLlinks);
-links.addEventListener("click", handleLlinks);
 
-window.addEventListener("scroll", function () {
-    window.scrollY > 100 && (navbar.style.background = `rgba(0,0,0,0.9)`);
-    window.scrollY < 100 && (navbar.style.background = `transparent`);
-});
+// const navbar = document.querySelector(".navbar");
+// const menu = document.querySelector(".navbar__menu");
+// const links = document.querySelector(".navbar__links");
+// const sections = document.querySelectorAll("section");
+// const config = {
+//     rootMargin: "0px",
+//     threshold: [0.6, 0.9],
+// };
 
-let observer = new IntersectionObserver(function (entries, self) {
-    entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-        intersectionHandler(entry);
-        }
-    });
-}, config);
+// function handleLlinks() {
+//     if (window.innerWidth <= 678) {
+//         links.classList.toggle("visible");
+//     }
+// }
 
-sections.forEach((section) => {
-    observer.observe(section);
-});
+// menu.addEventListener("click", handleLlinks);
+// links.addEventListener("click", handleLlinks);
 
-function intersectionHandler(entry) {
-    const id = entry.target.id;
-    const currentlyActive = document.querySelector(".navbar__links .active");
-    const shouldBeActive = document.querySelector(
-    ".navbar__links [data-ref=" + id + "]"
-    );
+// window.addEventListener("scroll", function () {
+//     window.scrollY > 100 && (navbar.style.background = `rgba(0,0,0,0.9)`);
+//     window.scrollY < 100 && (navbar.style.background = `transparent`);
+// });
 
-    if (currentlyActive) {
-        currentlyActive.classList.remove("active");
-    }
-    if (shouldBeActive) {
-        shouldBeActive.classList.add("active");
-    }
-}
+// let observer = new IntersectionObserver(function (entries, self) {
+//     entries.forEach((entry) => {
+//     if (entry.isIntersecting) {
+//         intersectionHandler(entry);
+//         }
+//     });
+// }, config);
+
+// sections.forEach((section) => {
+//     observer.observe(section);
+// });
+
+// function intersectionHandler(entry) {
+//     const id = entry.target.id;
+//     const currentlyActive = document.querySelector(".navbar__links .active");
+//     const shouldBeActive = document.querySelector(
+//     ".navbar__links [data-ref=" + id + "]"
+//     );
+
+//     if (currentlyActive) {
+//         currentlyActive.classList.remove("active");
+//     }
+//     if (shouldBeActive) {
+//         shouldBeActive.classList.add("active");
+//     }
+// }
