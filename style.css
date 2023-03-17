@@ -504,9 +504,6 @@ form input::placeholder {
   padding-left: 6px;
 }
 
-section.formcontato form input:focus {
-}
-
 section.formcontato form textarea {
   background-color: rgba(234, 242, 253, 0);
   border: solid 1px #ffffff;
@@ -516,9 +513,6 @@ section.formcontato form textarea {
   width: 76vw;
   color: #ffffff;
   padding: 6px 2px 0 6px;
-}
-
-section.formcontato form textarea:focus {
 }
 
 textarea::placeholder {
@@ -548,11 +542,15 @@ section.footer {
   opacity: 70%;
 }
 
-section.footer div.rodape {
+section.footer div.rodape-mobile {
   font-weight: 500;
   font-size: 14px;
   line-height: 1rem;
   text-align: center;
+}
+
+.rodape-desktop {
+  display: none;
 }
 
 
@@ -562,7 +560,7 @@ MEDIA QUERIES
 
 @media (min-width: 768px) {
   .todo {
-    margin: 32px 32px;
+    margin: 0px;
   }
 
   .dropdown-responsive{
@@ -589,12 +587,25 @@ MEDIA QUERIES
   }
 
   div.title-container {
-    width: 524px;
+    width: 124px;
   }
 
   section.title img.profile {
-    width: 157px;
+    width: 24%;
+    height: fit-content;
     margin-left: 32px;
+  }
+
+  section.title div.title-div div.title-container ul {
+    justify-content: left;
+    margin-left: 0%;
+    width: 50%;
+  }
+
+  section.title div.title-div div.title-container ul li img {
+    width: 3vw;
+    height: auto;
+    margin-right: 20px;
   }
 
   /*Skills*/
@@ -650,13 +661,14 @@ MEDIA QUERIES
 
 @media (min-width: 1000px) {
   /*main*/
-
+  .fondo {
+    width: 100%;
+  }
   .section-title {
     font-size: 32px;
   }
 
   /*Menu*/
-
   
   section.menu nav ul.menu-list {
     display: flex;
@@ -678,12 +690,13 @@ MEDIA QUERIES
   }
 
   section.title img.profile {
-    width: auto;
+      width: 24%;
+      height: fit-content;
+      margin-left: 32px;
   }
 
   section.title div.title-div div.title-container ul {
     display: flex;
-    margin-left: -65px;
     align-items: center;
     padding: 0px;
     font-size: 16px;
@@ -787,11 +800,20 @@ MEDIA QUERIES
     width: 50%;
   }
 
-  /*Contrato*/
-
+  /*Contacto*/
+  section.formcontato {
+    background-image: url(./assets/img/et-fingers-contact.jpg);
+    background-size: 997px 626px;
+    background-repeat: no-repeat;
+    background-position-x: 172px;
+    background-position-y: center;
+  }
   section.formcontato div.contact {
     display: flex;
     justify-content: center;
+    background-color: rgb(93, 52, 236, .8);
+    background-blend-mode: darken;
+    width: 996.8px;
   }
 
   section.formcontato div.contact-text {
@@ -805,6 +827,7 @@ MEDIA QUERIES
     display: block;
     width: 464px;
     height: 570px;
+    opacity: 30%;
   }
 
   section.formcontato form input {
@@ -823,6 +846,16 @@ MEDIA QUERIES
     font-weight: 500;
     text-align: center;
     padding: 1%;
+  }
+
+  .rodape-desktop {
+      display: block;
+      text-align: center;
+      margin-bottom: 1vh;
+  }
+  
+  .rodape-mobile {
+      display: none;
   }
 }
 
@@ -854,4 +887,5 @@ MEDIA QUERIES
   section.formcontato {
     padding: 64px 172px;
   }
+
 }

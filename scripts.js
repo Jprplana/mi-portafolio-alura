@@ -26,24 +26,45 @@ function validarDatos() {
 document.querySelector("form").addEventListener("submit", validarDatos);
 
 ///////////////////////////////////////////////////////////////////////
+// DROPDOWN MENU
 
-let menuVisible = false;
-//Función que oculta o muestra el menu
-function mostrarOcultarMenu(){
-    if(menuVisible){
-        document.getElementById("dropdown").classList ="";
-        menuVisible = false;
-    }else{
-        document.getElementById("dropdown").classList ="responsive";
-        menuVisible = true;
+function seleccionar() {
+  document.getElementById("content").classList.toggle("show");
+}
+window.onclick = function (event) {
+  if (!event.target.matches(".menu-link")) {
+    var dropdowns = document.getElementsByClassName("menu-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains("show")) {
+        openDropdown.classList.remove("show");
+      }
     }
-}
+  }
+};
 
-function seleccionar(){
-    //oculto el menu una vez que selecciono una opcion
-    document.getElementById("dropdown").classList = "";
-    menuVisible = false;
-}
+////////////////////////////////////////////////////////////////////
+// PRUEBAS
+///////////////////////////////////////////////////////////////////
+
+// let menuVisible = false;
+// //Función que oculta o muestra el menu
+// function mostrarOcultarMenu(){
+//     if(menuVisible){
+//         document.getElementById("dropdown").classList ="";
+//         menuVisible = false;
+//     }else{
+//         document.getElementById("dropdown").classList ="responsive";
+//         menuVisible = true;
+//     }
+// }
+
+// function seleccionar(){
+//     //oculto el menu una vez que selecciono una opcion
+//     document.getElementById("dropdown").classList = "";
+//     menuVisible = false;
+// }
 
 
 
@@ -69,27 +90,6 @@ function seleccionar(){
 //     document.getElementById("content").classList="";
 //     MenuVisible = false;
 // }
-
-////////////////////////////////////////////////////////////////////
-
-
-// function seleccionar() {
-//   document.getElementById("content").classList.toggle("show");
-// }
-// window.onclick = function (event) {
-//   if (!event.target.matches(".menu-link")) {
-//     var dropdowns = document.getElementsByClassName("menu-content");
-//     var i;
-//     for (i = 0; i < dropdowns.length; i++) {
-//       var openDropdown = dropdowns[i];
-//       if (openDropdown.classList.contains("show")) {
-//         openDropdown.classList.remove("show");
-//       }
-//     }
-//   }
-// };
-
-
 
 ////////////////////////////////////////////////////////////////////////////////////////
 
