@@ -2,25 +2,25 @@ function validarDatos() {
   window.event.preventDefault();
 
   if (document.form.nombre.value == "") {
-    alert("Campo nombre es obligatorio");
+    alert("El campo Nombre es obligatorio");
     document.form.nombre.focus();
   } else if (document.form.email.value == "") {
-    alert("Campo e-mail es obligatorio");
+    alert("El campo E-mail es obligatorio");
     document.form.email.focus();
   } else if (document.form.asunto.value == "") {
-    alert("Campo Asunto es obligatorio");
+    alert("El campo Asunto es obligatorio");
     document.form.asunto.focus();
   } else if (
     document.form.mensaje.value == "" ||
-    document.form.mensaje.value.length <= 50
+    document.form.mensaje.value.length < 30
   ) {
-    alert("Campo Mensaje es obligatorio y debe contener máximo 50 carateres");
+    alert("El campo Mensaje es obligatorio y debe contener un mínimo de 30 carateres");
     document.form.mensaje.focus();
   } else if (
     document.form.email.value.indexOf("@") == -1 ||
     document.form.email.value.indexOf(".") == -1
   ) {
-    alert("e-mail inválido");
+    alert("Formato de e-mail inválido");
   }
 }
 document.querySelector("form").addEventListener("submit", validarDatos);
@@ -45,7 +45,7 @@ window.onclick = function (event) {
 };
 
 ////////////////////////////////////////////////////////////////////
-// PRUEBAS
+// PRUEBAS FALLIDAS
 ///////////////////////////////////////////////////////////////////
 
 // let menuVisible = false;
