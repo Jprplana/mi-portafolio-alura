@@ -1,7 +1,7 @@
 /*CSS Reset / Normalize*/
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -12,7 +12,7 @@ body {
     rgba(93, 52, 236, 1) 100.2%
   );
   color: #eaf2fd;
-  cursor: pointer;
+  cursor: auto;
   font-family: "Raleway";
   margin: 0;
   padding: 0;
@@ -26,7 +26,6 @@ body {
     109.6deg,
     rgba(93, 52, 236, 0.5) 30.2%,
     rgba(62, 161, 219, 0.5) 80.2%
-    
   );
 }
 
@@ -61,27 +60,37 @@ select:focus {
   position: relative;
 }
 
-
 /* Sección Menu */
 
 section.menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  align-content: flex-end;
+  align-content: center;
   height: 10vh;
   margin-left: 16px;
   margin-right: 16px;
 }
 
+section.menu header a {
+  font-size: 4vh;
+  margin-left: 1px;
+  opacity: 25%;
+}
+
 section.menu header img {
-  height: 3vh;
-  opacity: 50%;
+  height: 6vh;
+  opacity: 25%;
 }
 
 section.menu nav ul.menu-list {
-    display: none;
-  }
+  display: none;
+}
+
+section.menu nav ul.menu-list .menu-list-item a:hover {
+  filter: drop-shadow(2px 2px 2px black);
+  font-size: 18px;
+}
 
 section header {
   display: flex;
@@ -103,13 +112,13 @@ section header {
 }
 
 .menu-btn img {
-    height: 5vh;
-    opacity: 70%;
-    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 1);
-    border-radius: 5px;
+  height: 5vh;
+  opacity: 70%;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 1);
+  border-radius: 5px;
 }
 
-.dropdown-responsive{
+.dropdown-responsive {
   display: block;
 }
 
@@ -126,7 +135,7 @@ section header {
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 1);
   z-index: 1;
-  background-color:rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
   right: 0;
 }
 
@@ -136,7 +145,7 @@ section header {
 
 /* Links inside the dropdown */
 .menu-content a {
-  color:#eaf2fd;
+  color: #eaf2fd;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -144,8 +153,8 @@ section header {
 
 /* Change color of dropdown links on hover */
 .menu-content a:hover {
-  background-color:rgba(62, 161, 219, 0.5);
-    /* filter: drop-shadow(2px 2px 2px black); */
+  background-color: rgba(62, 161, 219, 0.5);
+  /* filter: drop-shadow(2px 2px 2px black); */
 }
 
 /* Show the dropdown menu on hover */
@@ -169,11 +178,6 @@ section header {
 
 .title-container {
   margin-bottom: 7vh;
-}
-
-section header h3.menu-title {
-  margin-left: 1px;
-  opacity: 50%;
 }
 
 section.title div.title-div div.title-container h2 {
@@ -212,13 +216,15 @@ section.title div.title-div div.title-container ul li img {
   height: auto;
 }
 
+section.title div.title-div div.title-container ul li img:hover {
+  filter: drop-shadow(2px 2px 2px rgb(252, 251, 251));
+  filter: invert(32%);
+}
+
 section.title img.profile {
   width: 32%;
   filter: drop-shadow(2px 2px 2px black);
 }
-
-
-
 
 /*Sección About*/
 
@@ -229,12 +235,11 @@ section.about {
   margin-bottom: 5vh;
   border-radius: 20px;
   border: solid 1px #464646;
-  margin: 0 16px
+  margin: 0 16px;
 }
 
 section.about div.about-container {
   padding: 8px;
-  
 }
 
 section.about div.about-container p {
@@ -317,7 +322,7 @@ section.hobbies-section div.hobbies-line div.hobbies-box ul {
   text-align: center;
 }
 
-section.hobbies-section div.hobbies-line div.hobbies-box ul li img{
+section.hobbies-section div.hobbies-line div.hobbies-box ul li img {
   height: 10vh;
 }
 
@@ -391,7 +396,6 @@ section.academic div.courses ul li.course-subtitle {
 
 /* Experiencia*/
 
-
 section.experience .section-title {
   margin-bottom: 5vh;
 }
@@ -442,7 +446,7 @@ section.experience div.experiencia-box span.experience-demo button {
   margin-left: 16px;
   border: 1px solid white;
   border-radius: 5px;
-  background: rgb(42, 122, 228,0);
+  background: rgb(42, 122, 228, 0);
   color: white;
 }
 
@@ -460,13 +464,13 @@ section.formcontato {
   margin: 4vh 16px;
 }
 
-section.formcontato div.esquerda img.contact-img {
-  display: none;
+section.formcontato div.contact {
+  text-align: center;
 }
 
 section.formcontato div.contact div.contact-text h3.contact-subtext {
   font-weight: 500;
-  font-size: 16px;
+  font-size: 14px;
   padding: 10px;
   margin: 0;
   line-height: 1.25rem;
@@ -482,9 +486,8 @@ section.formcontato div.contact div.contact-text h2.contact-title {
 section.formcontato form {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   padding: 10px;
-  margin: 0;
 }
 
 section.formcontato form input {
@@ -493,7 +496,7 @@ section.formcontato form input {
   flex-grow: 1;
   margin: 10px 0px;
   height: 56px;
-  width: 76vw;
+  width: 100%;
   color: #ffffff;
   padding-left: 6px;
 }
@@ -510,7 +513,7 @@ section.formcontato form textarea {
   flex-grow: 1;
   margin: 10px 0px;
   height: 96px;
-  width: 76vw;
+  width: 100%;
   color: #ffffff;
   padding: 6px 2px 0 6px;
 }
@@ -531,6 +534,7 @@ form.form button {
   background-color: white;
   color: rgba(93, 52, 236, 1);
   margin: 32px 1px;
+  align-self: center;
 }
 
 /*footer*/
@@ -553,7 +557,6 @@ section.footer div.rodape-mobile {
   display: none;
 }
 
-
 /* ////////////////////////////////////////////////////////////////////////////////////////////
 MEDIA QUERIES
 //////////////////////////////////////////////////////////////////////////////////////////// */
@@ -563,18 +566,27 @@ MEDIA QUERIES
     margin: 0px;
   }
 
-  .dropdown-responsive{
+  .dropdown-responsive {
     display: none;
   }
 
   section.menu nav ul.menu-list {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     font-size: 14px;
     width: 500px;
   }
 
   /*title*/
+
+  section.menu header a {
+    font-size: 3vh;
+  }
+
+  section.menu header img {
+    height: 5vh;
+  }
+
   section.title {
     margin-bottom: 32px;
   }
@@ -587,13 +599,22 @@ MEDIA QUERIES
   }
 
   div.title-container {
-    width: 124px;
+    width: 66%;
   }
 
   section.title img.profile {
     width: 24%;
     height: fit-content;
     margin-left: 32px;
+  }
+
+  section.title div.title-div div.title-container h2 {
+    font-size: 32px;
+  }
+
+  section.title div.title-div div.title-container h3 {
+    font-size: 16px;
+    line-height: 1.3rem;
   }
 
   section.title div.title-div div.title-container ul {
@@ -612,6 +633,7 @@ MEDIA QUERIES
 
   section.skills div.skills-line {
     width: 100%;
+    margin-left: 7px;
   }
 
   section.skills div.skills-line div.skills-box {
@@ -624,6 +646,7 @@ MEDIA QUERIES
 
   section.hobbies-section div.hobbies-line {
     width: 100%;
+    justify-content: space-around;
   }
 
   section.hobbies-section div.hobbies-line div.hobbies-box {
@@ -633,6 +656,10 @@ MEDIA QUERIES
   }
 
   /*experiencias académicas*/
+
+  section.academic {
+    margin: 9vh 16px;
+  }
 
   section.academic div.courses {
     display: flex;
@@ -649,13 +676,27 @@ MEDIA QUERIES
 
   /*experiencia profesional*/
 
-  section.experience div.experiencia-box {
+  section.experience div.experience-proyectos {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  section.experience div.experience-proyectos div.experiencia-box {
     display: flex;
     flex-direction: column;
+    width: 40%;
   }
 
   section.experience div.experiencia-box img {
     width: 100%;
+  }
+
+  /* Contacto */
+
+  section.formcontato {
+    margin: 4vh 50px;
+    width: 70%;
+    align-self: center;
   }
 }
 
@@ -669,10 +710,10 @@ MEDIA QUERIES
   }
 
   /*Menu*/
-  
+
   section.menu nav ul.menu-list {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     font-size: 16px;
     width: 600px;
   }
@@ -683,16 +724,14 @@ MEDIA QUERIES
     line-height: 50px;
   }
 
-
-
   div.title-container {
     width: 751px;
   }
 
   section.title img.profile {
-      width: 24%;
-      height: fit-content;
-      margin-left: 32px;
+    width: 24%;
+    height: fit-content;
+    margin-left: 32px;
   }
 
   section.title div.title-div div.title-container ul {
@@ -780,8 +819,13 @@ MEDIA QUERIES
     justify-content: center;
   }
 
-  section.experience div.experiencia-box:nth-child(2) {
-    margin-top: 50px;
+  section.experience div.experience-proyectos div.experiencia-box {
+    align-self: flex-start;
+    width: 43%;
+  }
+
+  section.experience div.experience-proyectos {
+    justify-content: end;
   }
 
   section.experience div.experiencia-box:nth-child(3) {
@@ -792,35 +836,34 @@ MEDIA QUERIES
     flex-direction: row-reverse;
   }
 
-  section.experience div.info-container {
-    margin: 0 5%;
-  }
-
   section.experience div.experiencia-box img {
-    width: 50%;
+    width: 75%;
   }
 
   /*Contacto*/
   section.formcontato {
+    width: 64%;
+    align-self: center;
     background-image: url(./assets/img/et-fingers-contact.jpg);
-    background-size: 997px 626px;
+    background-size: 100% 626px;
     background-repeat: no-repeat;
-    background-position-x: 172px;
     background-position-y: center;
+    overflow: hidden;
+    padding: 0%;
   }
   section.formcontato div.contact {
     display: flex;
     justify-content: center;
-    background-color: rgb(93, 52, 236, .8);
-    background-blend-mode: darken;
-    width: 996.8px;
+    background-color: rgb(93, 52, 236, 0.8);
+    width: 100%;
+    max-height: 632px;
+    align-items: center;
   }
 
   section.formcontato div.contact-text {
     display: flex;
     flex-direction: column;
-    margin-left: 2%;
-    margin-top: -2%;
+    width: 80%;
   }
 
   section.formcontato div.esquerda img.contact-img {
@@ -848,12 +891,12 @@ MEDIA QUERIES
   }
 
   .rodape-desktop {
-      display: block;
-      text-align: center;
+    display: block;
+    text-align: center;
   }
-  
+
   .rodape-mobile {
-      display: none;
+    display: none;
   }
 }
 
@@ -883,7 +926,8 @@ MEDIA QUERIES
   }
 
   section.formcontato {
-    padding: 64px 172px;
-  }
-
+    width: 64%;
+    align-self: center;
+    background-size: 100% 626px;
+}
 }
